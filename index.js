@@ -125,6 +125,47 @@ console.log(true == 1);
 
 // TERNERY
 
-// 
+// example 
+
+// If a customer has more than 100 points,
+// they are a 'gold' customer, otherwise,
+// they are a 'silver' customer.
+
+let points = 110;
+let type = points > 100 ? 'gold' : 'silver';
+
+console.log(type);
+
+
+
+// LOGICAL 
+
+// logical AND (&&)
+// Returns TRUE if both operands are TRUE
+
+let highIncome = true;
+let goodCreditScore = true;
+let eligibleForLoan = highIncome && goodCreditScore;
+
+console.log(eligibleForLoan);
+//  answer - true
+
+// logical OR (||)
+// Returns TRUE if one of the operands are TRUE
+
+// let highIncome = false;
+// let goodCreditScore = false;
+// let eligibleForLoan = highIncome || goodCreditScore;
+
+// console.log('Eligible', eligibleForLoan);
+// answer - false
+
+// NOT (!)
+
+// let applicationRefused = !eligibleForLoan;
+
+// console.log('Application Refused', applicationRefused)
+
+// answer - Application refused, true
 
 
