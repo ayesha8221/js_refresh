@@ -107,3 +107,43 @@ const another = new Circle(1);
  
 
 // ENUMERATING PROPERTIES OF OBJECTS
+
+const circle = {
+    radius: 1,
+    draw() {
+        console.log('draw');
+    }
+};
+
+for (let key in circle)
+console.log(key, circle[key]);
+
+for (let key of Object.keys(circle))
+console.log(key);
+
+for (let entry of Object.entries(circle))
+console.log(entry);
+
+if ('color' in circle) console.log('yes');
+
+
+
+// CLONING AN OBJECT
+
+const circle = {
+    radius: 1,
+    draw() {
+        console.log('draw');
+    }
+};
+
+
+// const another = {};
+// for (let key in circle)
+//   another[key] = circle[key];
+
+const another = Object.assign({}, circle);
+
+const another = { ...circle};
+
+console.log(another);
