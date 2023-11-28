@@ -147,3 +147,20 @@ const another = Object.assign({}, circle);
 const another = { ...circle};
 
 console.log(another);
+
+
+// GARBAGE COLLECTION
+
+
+// STRING
+
+const name = 'John';
+const message = 'Hi ' + name + ',\n';
+
+const another =
+`Hi ${name} ${2 + 3},
+
+Thank you for joining my mailing list.
+
+Regards 
+Ayesha`;
