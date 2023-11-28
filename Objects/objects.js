@@ -26,3 +26,84 @@ const circle = {
 circle.draw(); // called a METHOD
 
 //OBJECT ORIENTED PROGRAMMING (OOP)
+
+
+//  FACTORY FUNCTION
+// produces objects
+// this function 
+
+function createCircle(radius) {
+    return {
+        radius,
+        draw() {
+            console.log('draw');
+        }
+    }
+}
+
+// change radius here
+const circle1 = createCircle(1);
+console.log(circle1);
+
+// eg
+const circle2 = createCircle(2);
+console.log(circle2);
+
+
+// to call draw method
+
+circle1.draw()
+
+
+
+// CONSTRUCTOR FUNCTION
+
+// CAMEL NOTATION : oneTwoThreeFour
+// PASCAL NOTATION : OneTwoThreeFour
+
+
+const myCircle = createCircle(1);
+
+
+function Circle(radius) {
+    this.radius = radius;
+    this.draw = function() {
+        console.log('draw');
+    }
+}
+
+// 'new' operator dows 3 things
+// operator creates an empty object 
+// them sets 'this' to point to the object
+// then returns the object
+
+const circle = new Circle(1);
+
+
+// DYNAMIC NATURE OF OBJECTS
+
+// ONCE YOU CREATE THEM YOU CAN MODFY OR DELETE THEM
+
+const circle = {
+    radius: 1
+};
+
+// adding properties 'colour' to the object
+circle.colour = 'yellow';
+
+// adding a function to the object
+circle.draw = function() {}
+
+
+// delete properties an function
+delete circle.colour;
+delete circle.draw;
+
+console.log(circle);
+
+
+const another = new Circle(1);
+
+ 
+
+// ENUMERATING PROPERTIES OF OBJECTS
