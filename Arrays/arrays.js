@@ -89,3 +89,21 @@ console.log(first);
 numbers.splice(2, 2);
 console.log(numbers);
 // 1, 2
+
+
+// EMPTYING AN ARRAY
+
+ let numbers = [1, 2, 3, 4];
+ let another = numbers;
+
+//  Solution 1
+numbers = [];
+
+// Solution 2
+numbers.length = 0;
+
+console.log(numbers);
+console.log(another);
+
+
+// COMBINING OR SLICING AN ARRAY 
