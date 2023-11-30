@@ -137,3 +137,34 @@ const copy = [...combined]
 
 console.log(combined);
 console.log(slice);
+
+
+// ITERATING AN ARRAY
+
+// for
+// forEach
+// Fat arrow / arrow function
+
+const numbers = [1, 2, 3];
+
+for(let number in numbers) {
+    console.log(number);
+}
+// 1
+// 2
+// 3
+
+numbers.forEach(function(number) {
+    console.log(number);
+})
+// 1
+// 2
+// 3
+
+// arrow function
+// remove function
+// can have more parameters
+numbers.forEach((number, index) => console.log(index, number));
+// 0 1
+// 1 2
+// 2 3
