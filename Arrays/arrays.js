@@ -36,4 +36,56 @@ console.log(numbers.includes(1));
 
 
 
-// 
+//  FINDING PRIMITIVES
+
+// different to finding refernce types
+
+const courses = [
+    {
+        id: 1,
+        name: 'a'
+    },
+    {
+        id: 2,
+        name: 'b'
+    }
+];
+
+const course = courses.findIndex(function(course) {
+    return course.name === 'a';
+});
+
+console.log(course);
+// 0 because index of a is 0
+
+
+// ARROW FUNCTIONS
+
+//  reads as curses.find points to course.name that equals to a
+const course = courses.find(course => course.name === 'a');
+
+console.log(course);
+
+
+// REMOVE ELEMENTS FROM AN ARRAY
+
+const numbers = [1, 2, 3, 4];
+
+// End
+const last = numbers.pop()
+console.log(numbers);
+console.log(last);
+// 1, 2, 3
+// 4
+
+// Beginning
+const first = numbers.unshift()
+console.log(first);
+// 2,3
+
+// middle
+// first argument start index
+// second argument how many elements top delete
+numbers.splice(2, 2);
+console.log(numbers);
+// 1, 2
