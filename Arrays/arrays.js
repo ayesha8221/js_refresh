@@ -107,3 +107,33 @@ console.log(another);
 
 
 // COMBINING OR SLICING AN ARRAY 
+
+const first = [1, 2, 3];
+const second = [4, 5, 6];
+
+const combined = first.concat(second);
+// 1,2,3,4,5,6
+const slice = combined.slice(2, 4);
+// 3, 4
+
+console.log(combined);
+console.log(slice);
+
+
+// SPREAD OPERATOR
+
+// when you all the elements of the first array followed by the second array
+
+const first = [1, 2, 3];
+const second = [4, 5, 6];
+
+// const combined = first.concat(second);
+const combined = [...first, ...second];
+// 1,2,3,4,5,6
+
+// create new array called copy to copy elements to a whole new array
+// returns elements of combinned array
+const copy = [...combined]
+
+console.log(combined);
+console.log(slice);
