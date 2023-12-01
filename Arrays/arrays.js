@@ -168,3 +168,20 @@ numbers.forEach((number, index) => console.log(index, number));
 // 0 1
 // 1 2
 // 2 3
+
+
+// JOINING ARRAYS
+
+// this is used to make urls
+
+const numbers = [1, 2, 3];
+const joined = numbers.join(',');
+console.log(joined);
+
+const message = 'This is my first message'; 
+const parts = message.split('');
+console.log(parts);
+
+const combined = parts.join('-');
+console.log(combined);
+
