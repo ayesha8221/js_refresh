@@ -61,7 +61,7 @@ console.log(course);
 
 // ARROW FUNCTIONS
 
-//  reads as curses.find points to course.name that equals to a
+//  reads as courses.find points to course.name that equals to a
 const course = courses.find(course => course.name === 'a');
 
 console.log(course);
