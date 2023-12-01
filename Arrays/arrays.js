@@ -185,3 +185,38 @@ console.log(parts);
 const combined = parts.join('-');
 console.log(combined);
 
+
+// SORTING ARRAYS
+
+const numbers = [1, 2, 3]
+
+numbers.reverse();
+console.log(numbers);  
+
+const courses = [
+    {
+        id: 1,
+        name: 'Nodejs'
+    },
+    {
+        id: 2,
+        name: 'javascript'
+    }
+];
+
+courses.sort(function(a, b) {
+
+    const nameA = a.name.toLowerCase();
+    const nameB = b.name.toLowerCase();
+
+    if (nameA < nameB) return -1;
+    if (nameA > nameB) return 1;
+    return 0;
+
+})
+
+console.log(courses);
+
+
+// TESTING ELEMENTS OF ARRAY
+
