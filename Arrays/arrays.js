@@ -220,3 +220,28 @@ console.log(courses);
 
 // TESTING ELEMENTS OF ARRAY
 
+// every() checks to see if every object matches the criteria 
+// some() checks if some objects match the criteria
+
+const numbers = [1, -1, 2, 3];
+
+// checking to see if all positive
+const atLeastOnePositive = numbers.every(function(value) {
+    return value >= 0;
+});
+
+console.log(atLeastOnePositive);
+
+// FILTERING AN ARRAY
+
+// return posiive numbers
+const numbers = [1, -1, 2, 3];
+
+// const filtered = numbers.filter(function(value) {
+//      return value >=0;
+//     });
+
+const filtered = numbers.filter(n => n >= 0);
+
+    // able to use an arrow function because its one line of code just returning a number make it look cleaner
+    console.log(filtered);
