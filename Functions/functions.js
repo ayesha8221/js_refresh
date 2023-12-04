@@ -62,4 +62,19 @@ function sum(discount, ...prices) {
 // in this example we have discount and the ...prices REST OF THE PARAMETERS hence being a called rest operator
     
     console.log(sum(0.1, 20, 30));
+
+
+// DEFAULT PARAMETERS
+
+// to give parameters a default value, either make it last or eberything after that should have a default value too
+
+function interest(principal, rate = 3.5, year = 5){
+    return principal * rate / 100 * year;
+}
+
+console.log(interest(10000));
+
+
+
+// 
     
