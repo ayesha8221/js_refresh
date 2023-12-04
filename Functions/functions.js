@@ -102,3 +102,102 @@ const person = {
 person.fullName = 'Buelah Kruger';
 
 console.log(person);
+
+
+// ERROR HANDLING
+
+// defensive programming - goes at the beginning of the function
+// using the throw method, the lines after are not executed
+// and will move to the catch block
+
+
+const person = {
+    firstName : 'Ayesha',
+    lastName : 'Galant',
+    get fullName() {
+        return `${person.firstName} ${person.lastName}`
+    },
+    set fullName(value) {
+        // throw error
+        if (typeof value !== 'string')
+        throw new Error ('Value is not a string');
+
+        // to make spacing
+        const parts = value.split(' ');
+        if (parts.legnth !== 2)
+        throw new Error('Enter a first and last name')
+
+        this.firstName = parts[0];
+        this.lastName = parts[1];
+    }
+};
+
+try {
+    person.fullName = 'Buelah Kruger';
+}
+catch (e) {
+    alert (e);
+}
+
+console.log(person);
+
+
+
+// LOCAL VS GLOBAL SCOPE
+// local constants in a function take precedence over global variables or constants
+
+const colour = 'red';
+
+function start() {
+    const message = 'hi';
+    const colour = 'blue';
+    console.log(colour);
+}
+
+function stop() {
+    const message = 'bye';
+}
+
+start();
+
+
+// LET VS VAR
+
+// var => function-scoped
+// ES6 (ES2015): let, const => block-scoped
+
+function start() {
+    for (let i = 0; i < 5; i++) {
+        if (true) {
+            var colour = 'red'; // accessible anywhere in the function block
+            let colour = 'blue'; // not accessible
+        }
+    }
+    console.log(colour);
+
+}
+
+start();
+
+
+
+// THE THIS KEYWORD
+
+// method -> obj
+// function -> global (window, global)
+
+const video = {
+    title: 'a',
+    tags: ['a', 'b', 'c'],
+    showTags() {
+        this.tags.forEach(function(tag) {
+            console.log(this.title, tag);
+        }, this);
+    }
+};
+
+video.showTags();
+
+
+// CHNAGING THIS
+
