@@ -76,5 +76,29 @@ console.log(interest(10000));
 
 
 
-// 
+// GETTERS AND SETTERS
+
+// getters => access properties
+// setters => change (mutate) them
+
+// with getters and setters
+// you can read persons full name
+// and then change it from the outside
     
+const person = {
+    firstName : 'Ayesha',
+    lastName : 'Galant',
+    get fullName() {
+        return `${person.firstName} ${person.lastName}`
+    },
+    set fullName(value) {
+        // to make spacing
+        const parts = value.split(' ');
+        this.firstName = parts[0];
+        this.lastName = parts[1];
+    }
+};
+
+person.fullName = 'Buelah Kruger';
+
+console.log(person);
